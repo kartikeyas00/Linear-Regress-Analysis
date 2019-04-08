@@ -8,24 +8,10 @@ Created on Sun Apr  7 16:01:29 2019
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 """
-Linear regression line has an equation of the form Y=mX+b where Y is the 
-dependent variable and X is the independent variable. 
-
-Examples of Linear regressions can be:
-    1) Predicting house prices in a city on the basis of the area of the house.
-        In this case the area of the house is independent variable and the 
-        housing price is a dependent variable.
-    2) Predicting tax rate on the basis of the per capita income of a country,
-        In this case the per capita income is the independent variable and the 
-        tax rate is the dependent variable.
-        
-We will be talking about two different approaches to calculate the best fit line
-
-1) Minimising the root mean squared deviation with the classical approach
-2) Minimising the mean square error with gradient descent
+We will be talking about calculating the best fit line by Minimising the mean square error with gradient descent
  
-
 What is gradient descent?
 Gradient descent is the process of tweaking the linear regression parameter which
 are m(slope) or b(intercept) until the mean square error is the lowest.
@@ -51,6 +37,7 @@ class LinRegress_GD:
               and x_values we have and then we multiply the sum by a factor of 
               -2/N. N is the number of points we have.
       """
+      
       N = len(x)      
       b_gradient = -(2/N) *  sum(y - ((m * x) +b))  
       return b_gradient
@@ -64,6 +51,7 @@ class LinRegress_GD:
               a factor of -2/N. N is the number of points we have.
       
       """
+      
       N = len(x)
       m_gradient = -(2/N) * sum(x * (y - ((m * x) +b)))  
       return m_gradient
@@ -118,13 +106,5 @@ class LinRegress_GD:
         plt.xlabel('x')
         plt.ylabel('y')
         plt.legend(loc='best')
-        plt.show()
-  
-  
-months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-revenue = [52, 74, 79, 95, 115, 110, 129, 126, 147, 146, 156, 184]
-Model1=LinRegress_GD(months,revenue)
-Model1.get_equation()
-print(Model1.calc_correlation_coeff())
-print(Model1.calc_determination_coeff())
-Model1.plot_equation()
+        plt.show() 
+

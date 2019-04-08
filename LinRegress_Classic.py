@@ -9,9 +9,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 """
-The classical approach to find the best fit model to the two variable (response
-and independent) is to minimize the root mean squared deviation, 
-or equivalently, the sum of the squared deviations.
+We will be finding the line of best fit with the classical approach which is to minimize the root mean squared deviation, or equivalently, the sum of the squared deviations.
 
 """
 
@@ -59,12 +57,3 @@ class LinRegress_Classic:
          plt.ylabel('y')
          plt.legend(loc='best')
          plt.show()
-         
-
-months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-revenue = [52, 74, 79, 95, 115, 110, 129, 126, 147, 146, 156, 184]
-Model1=LinRegress_Classic(months,revenue)
-Model1.get_equation()
-print(Model1.calc_correlation_coeff())
-print(Model1.calc_determination_coeff())
-Model1.plot_equation()
