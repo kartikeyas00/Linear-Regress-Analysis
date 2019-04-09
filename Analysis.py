@@ -8,8 +8,31 @@ Created on Mon Apr  8 12:58:39 2019
 import numpy as np
 from scipy import stats,optimize
 import pandas as pd
+import LinRegress_Classic
+import LinRegress_GD
+from sklearn.linear_model import LinearRegression
+from matplotlib import pyplot as plt
 
-gdp=pd.read_csv('India_GDP.csv',skiprows=4)
-gdp_india=gdp[gdp['Country Name']=='India']
-gdp_india.drop(gdp_india.columns[[1,2,3,-2,-1]], axis=1, inplace=True)
-gdp_india=gdp_india.transpose().iloc[2:].reset_index().rename(index=str, columns={"index":"Year",107: "GDP($)"})
+gdp_india=pd.read_csv('India_GDP.csv')
+gdp=np.array(gdp_india[(gdp_india['Year']>=1996)&(gdp_india['Year']<=2018)]['GDP($)'])
+
+forexp_india=pd.read_csv('India_Forexp.csv')
+forexp=np.array(forexp_india['Total Export($)']).reshape(-1,1)
+
+"""
+Lets consider Foreign export be x and GDP be y
+"""
+
+
+def sklearn_LinearModel(x,y):
+    regression=LinearRegression(fit_intercept=True)
+    regression.fit(x,y)
+    y_predict=regression.predict(x)
+    plt.plot(x, y, 'o')
+    plt.plot(x,y_predict,label='Regression Line', linestyle='--')
+    plt.xlabel('Foreign Export($)')
+    plt.ylabel('GDP($)')
+    plt.legend(loc='best')
+    plt.show()
+    return [regression.intercept_,regression.coef_[0],'y = '+str(regression.coef_[0])+'x'+' + '+str(regression.intercept_),(regression.score(x,y))]
+
