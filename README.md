@@ -38,7 +38,8 @@ I would be performing Linear Regression on the Foreign Export and Gross Domestic
 
 ## Results:
 
-***Linear Model***
+***Linear Model (From Statsmodels.OLS)***
+![Screenshot](https://github.com/kartikeyas00/Linear-Regress-Analysis/blob/master/Plots/Linear%20Model%20(OLS).png)
 
 ***Results after performing Linear regression with the Python methods mentioned above***
 
