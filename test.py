@@ -7,7 +7,7 @@ Created on Fri Apr 12 21:34:38 2019
 import pandas as pd
 from matplotlib import pyplot as plt
 
-df=pd.DataFrame({'Methods':['sklearn.linear_model.LinearRegression','LinRegress_Classic','LinRegress_GD','numpy.polyfit','scipy.stats.linregress','scipy.optimize.curve_fit','Statsmodels.OLS'],
+df=pd.DataFrame({'Methods':['sklearn.linear_model','LinRegress_Classic','LinRegress_GD','numpy.polyfit','scipy.stats.linregress','scipy.optimize.curve_fit','Statsmodels.OLS'],
                  'Time':[res_sklearnTime,res_LinRegClassicTime,res_LinRegGDTime,res_PolyfitTime,res_LinregressTime,res_curevfitTime,res_olsTime]})
 
 f, axis = plt.subplots(2, 1, sharex=True)
