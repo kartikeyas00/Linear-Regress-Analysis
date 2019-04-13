@@ -63,43 +63,44 @@ class LinRegress_GD:
         m = m_current - (learning_rate * m_gradient)
         return [b, m]
       
-    def gradient_descent(self,x, y, learning_rate, num_iterations):
+    def gradient_descent(self,x, y):
       b = 0
       m = 0
       self.b_val=[]
       self.m_val=[]
-      for i in range(num_iterations):
-        b, m = self.step_gradient(b, m, x, y, learning_rate)
+      for i in range(self.num_iterations):
+        b, m = self.step_gradient(b, m, x, y, self.learning_rate)
         self.b_val.append(b)
         self.m_val.append(m)
       return [b,m,self.b_val,self.m_val]
 
     def plot_iterationsVsParameters(self):
         plt.plot(list(range(1,self.num_iterations+1)),
-                 self.gradient_descent(self.x,self.y,self.learning_rate,self.num_iterations)[2]
+                 self.gradient_descent(self.x,self.y)[2]
                  ,color='blue',label='Intercept')
         plt.plot(list(range(1,self.num_iterations+1)),
-                 self.gradient_descent(self.x,self.y,self.learning_rate,self.num_iterations)[3],
+                 self.gradient_descent(self.x,self.y)[3],
                  self.m_val,color='orange',label='Slope')
         plt.legend(loc='best')
         plt.show()
         
     def calc_correlation_coeff(self):
-        self.correlation_coeff= (self.gradient_descent(self.x,self.y,self.learning_rate,self.num_iterations)[1]*np.std(self.x))/np.std(self.y)
+        self.correlation_coeff= (self.gradient_descent(self.x,self.y)[1]*np.std(self.x))/np.std(self.y)
         return self.correlation_coeff
     
     def calc_determination_coeff(self):
+        self.calc_correlation_coeff()
         return np.square(self.correlation_coeff)
     
     def get_equation(self):
-        self.b=self.gradient_descent(self.x,self.y,self.learning_rate,self.num_iterations)[0]
-        self.m=self.gradient_descent(self.x,self.y,self.learning_rate,self.num_iterations)[1]
+        self.b=self.gradient_descent(self.x,self.y)[0]
+        self.m=self.gradient_descent(self.x,self.y)[1]
         self.equation='y = '+str(self.m)+' x + '+str(self.b)
-        print(self.equation)
+        return self.equation
     
     def plot_equation(self):
-        self.b=self.gradient_descent(self.x,self.y,self.learning_rate,self.num_iterations)[0]
-        self.m=self.gradient_descent(self.x,self.y,self.learning_rate,self.num_iterations)[1]
+        self.b=self.gradient_descent(self.x,self.y)[0]
+        self.m=self.gradient_descent(self.x,self.y)[1]
         y_predict=(self.m * self.x ) + self.b #Y values based on the equation
         plt.plot(self.x,self.y,"o")
         plt.plot(self.x,y_predict,label=self.equation, linestyle='--')
@@ -107,4 +108,3 @@ class LinRegress_GD:
         plt.ylabel('y')
         plt.legend(loc='best')
         plt.show() 
-
