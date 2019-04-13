@@ -44,5 +44,6 @@ Results:
 | Statsmodels.OLS                       |     0.0949917 |     190.277 | 6.23224 | y = 6.232237596577797x + 190.27720519776173 | 0.931941 
 
 Below is the plot for all the methods run time:
+![alt text](https://raw.githubusercontent.com/kartikeyas00/Linear-Regress-Analysis/blob/master/Plots/Time%20for%20different%20Methods.png)
 
 
