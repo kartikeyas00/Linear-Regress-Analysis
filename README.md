@@ -14,14 +14,14 @@ With two variables the typical equation of the regrssion line, which is also cal
         
 Here we will be displaying the variations in results and running time of the two Linear Regression methods written by me in Python and the builtin ways of doing Linear Regression in various libraries of Python.
 
-Linear Regression Class written by me:
+**Linear Regression Class written by me:**
 
 | Class Name | Description |
 | -----------| ------------|
 | LinRegress_GD | Calculates the best fit model with minimising the mean square error with gradient descent |
 | LinRegress_Classic | Calculates the best fit model by minimizing the root mean square deviation |
 
-Linear regression Methods from various Python libraries:
+**Linear regression Methods from various Python libraries:**
 
 | Method Name | Description |
 | ------------| ------------|
@@ -31,7 +31,7 @@ Linear regression Methods from various Python libraries:
 | Statsmodels.OLS | Provides full blown statisitical information about the estimation process by employing Least squares method |
 | sklearn.linear_model.LinearRegression | This is a classic method used by data scientist or in machine learning which is implemented with "scipy.linalg.lstsq"|
 
-Results:
+**Results:**
 
 | Methods                               |   Time To Run |   Intercept |   Slope | Equation                                    |      R^2 |
 |---------------------------------------|---------------|-------------|---------|---------------------------------------------|----------|
@@ -43,7 +43,7 @@ Results:
 | scipy.optimize.curve_fit              |     0.109349  |     190.277 | 6.23224 | y = 6.232237562809783x + 190.27720915775419 | 0.931941 |
 | Statsmodels.OLS                       |     0.0949917 |     190.277 | 6.23224 | y = 6.232237596577797x + 190.27720519776173 | 0.931941 
 
-Below is the plot for all the methods run time:
+**Below is the plot for all the methods run time:**
 ![Screenshot](https://github.com/kartikeyas00/Linear-Regress-Analysis/blob/master/Plots/Time%20for%20different%20Methods.png)
 
 
