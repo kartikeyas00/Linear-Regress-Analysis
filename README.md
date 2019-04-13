@@ -57,4 +57,16 @@ I would be performing Linear Regression on the Foreign Export and Gross Domestic
 ***Below is the plot for all the methods' run time:***
 ![Screenshot](https://github.com/kartikeyas00/Linear-Regress-Analysis/blob/master/Plots/Time%20for%20different%20Methods.png)
 
+## References
+
+- http://dgft.gov.in/more/data-statistics/export-import-data-bank
+- https://www.ceicdata.com/en/indicator/india/gdp-per-capita
+- https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html
+- https://docs.scipy.org/doc/numpy/reference/generated/numpy.polyfit.html
+- https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.linregress.html
+- https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html
+- https://www.statsmodels.org/dev/generated/statsmodels.regression.linear_model.OLS.html
+- https://en.wikipedia.org/wiki/Linear_regression
+- https://towardsdatascience.com/linear-regression-simplified-ordinary-least-square-vs-gradient-descent-48145de2cf76
+
 
