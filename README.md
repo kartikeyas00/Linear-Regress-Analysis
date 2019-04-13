@@ -1,6 +1,6 @@
 # Analysis of different methods and ways of Linear Regression in Python.
 
-***Introduction***
+## Introduction
 Linear regression is finding a line which best fits a set of data. Here we will be talking about the linear regression with only two variables, independent and the response variable.  
 With two variables the typical equation of the regrssion line, which is also called the regression equation looks like  **Y=mX+b** where Y is the dependent variable and X is the independent variable.
  
@@ -13,6 +13,8 @@ With two variables the typical equation of the regrssion line, which is also cal
         tax rate is the dependent variable.
         
 Here we will be displaying the variations in results and running time of the two Linear Regression methods written by me in Python and the builtin ways of doing Linear Regression in various libraries of Python.
+
+## Linear Regression Methods (Python)
 
 ***Linear Regression Class written by me:***
 
@@ -31,7 +33,14 @@ Here we will be displaying the variations in results and running time of the two
 | Statsmodels.OLS | Provides full blown statisitical information about the estimation process by employing Least squares method |
 | sklearn.linear_model.LinearRegression | This is a classic method used by data scientist or in machine learning which is implemented with "scipy.linalg.lstsq"|
 
-***Results:***
+## Data
+I would be performing Linear Regression on the Foreign Export and Gross Domestic Product Yearly data of India between 1996 and 2017. Here Foreign Export would be the Independent Variable and the Gross Domestic Product would be dependent on the Foreign Export. Also Foreign export is denoted as x and Gross Domestic Product is denoted as y. You can find the data in the folder *Data*.
+
+## Results:
+
+***Linear Model***
+
+***Results after performing Linear regression with the Python methods mentioned above***
 
 | Methods                               |   Time To Run |   Intercept |   Slope | Equation                                    |      R^2 |
 |---------------------------------------|---------------|-------------|---------|---------------------------------------------|----------|
@@ -42,6 +51,7 @@ Here we will be displaying the variations in results and running time of the two
 | scipy.stats.linregress                |     0.81231   |     190.277 | 6.23224 | y = 6.2322375965778x + 190.27720519776187   | 0.931941 |
 | scipy.optimize.curve_fit              |     0.109349  |     190.277 | 6.23224 | y = 6.232237562809783x + 190.27720915775419 | 0.931941 |
 | Statsmodels.OLS                       |     0.0949917 |     190.277 | 6.23224 | y = 6.232237596577797x + 190.27720519776173 | 0.931941 
+
 
 ***Below is the plot for all the methods' run time:***
 ![Screenshot](https://github.com/kartikeyas00/Linear-Regress-Analysis/blob/master/Plots/Time%20for%20different%20Methods.png)
