@@ -30,3 +30,15 @@ Linear regression Methods from various Python libraries:
 | scipy.optimize.curve_fit| Similar to "numpy.polyfit" but can fit any user-defined function to a data set by emplying the Least squares method|
 | Statsmodels.OLS | Provides full blown statisitical information about the estimation process by employing Least squares method |
 | sklearn.linear_model.LinearRegression | This is a classic method used by data scientist or in machine learning which is implemented with "scipy.linalg.lstsq"|
+
+Results:
+
+| Methods                               |   Time To Run |   Intercept |   Slope | Equation                                    |      R^2 |
+|---------------------------------------|---------------|-------------|---------|---------------------------------------------|----------|
+| sklearn.linear_model.LinearRegression |     0.127449  |     190.277 | 6.23224 | y = 6.232237596577798x + 190.2772051977622  | 0.931941 |
+| LinRegress_Classic                    |     0.148438  |     190.277 | 6.23224 | y = 6.232237596577798 x + 190.2772051977622 | 0.931941 |
+| LinRegress_GD                         | 15650.1       |     190.277 | 6.23224 | y = 6.232237596673 x + 190.27720517548482   | 0.931941 |
+| numpy.polyfit                         |     0.486575  |     190.277 | 6.23224 | y = 6.232237596577798x + 190.2772051977619  | 0.931941 |
+| scipy.stats.linregress                |     0.81231   |     190.277 | 6.23224 | y = 6.2322375965778x + 190.27720519776187   | 0.931941 |
+| scipy.optimize.curve_fit              |     0.109349  |     190.277 | 6.23224 | y = 6.232237562809783x + 190.27720915775419 | 0.931941 |
+| Statsmodels.OLS                       |     0.0949917 |     190.277 | 6.23224 | y = 6.232237596577797x + 190.27720519776173 | 0.931941 
