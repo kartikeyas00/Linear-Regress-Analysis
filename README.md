@@ -45,13 +45,13 @@ I would be performing Linear Regression on the Foreign Export and Gross Domestic
 
 | Methods                               |   Time To Run |   Intercept |   Slope | Equation                                    |      R^2 |
 |---------------------------------------|---------------|-------------|---------|---------------------------------------------|----------|
-| sklearn.linear_model.LinearRegression |     0.127449  |     190.277 | 6.23224 | y = 6.6.23224x + 190.277  | 0.931941 |
-| LinRegress_Classic                    |     0.148438  |     190.277 | 6.23224 | y = 6.6.23224x + 190.277 | 0.931941 |
-| LinRegress_GD                         | 15650.1       |     190.277 | 6.23224 | y = 6.6.23224x + 190.277   | 0.931941 |
-| numpy.polyfit                         |     0.486575  |     190.277 | 6.23224 | y = 6.6.23224x + 190.277  | 0.931941 |
-| scipy.stats.linregress                |     0.81231   |     190.277 | 6.23224 | y = 6.6.23224x + 190.277  | 0.931941 |
-| scipy.optimize.curve_fit              |     0.109349  |     190.277 | 6.23224 | y = 6.6.23224x + 190.277 | 0.931941 |
-| Statsmodels.OLS                       |     0.0949917 |     190.277 | 6.23224 | y = 6.6.23224x + 190.277 | 0.931941 |
+| sklearn.linear_model.LinearRegression |     0.127449  |     190.277 | 6.23224 | y = 6.23224x + 190.277  | 0.931941 |
+| LinRegress_Classic                    |     0.148438  |     190.277 | 6.23224 | y = 6.23224x + 190.277 | 0.931941 |
+| LinRegress_GD                         | 15650.1       |     190.277 | 6.23224 | y = 6.23224x + 190.277   | 0.931941 |
+| numpy.polyfit                         |     0.486575  |     190.277 | 6.23224 | y = 6.23224x + 190.277  | 0.931941 |
+| scipy.stats.linregress                |     0.81231   |     190.277 | 6.23224 | y = 6.23224x + 190.277  | 0.931941 |
+| scipy.optimize.curve_fit              |     0.109349  |     190.277 | 6.23224 | y = 6.23224x + 190.277 | 0.931941 |
+| Statsmodels.OLS                       |     0.0949917 |     190.277 | 6.23224 | y = 6.23224x + 190.277 | 0.931941 |
 
 
 ***Below is the plot for all the methods' run time:***
